@@ -1,0 +1,113 @@
+site_name: IvhuRedu Technical Documentation
+site_url: https://your-docs-url.com
+
+theme:
+  name: material
+  logo: assets/logo.png
+  favicon: assets/favicon.png
+  palette:
+    - scheme: default
+      primary: green
+      accent: green
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: green
+      accent: green
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Overview:
+    - Overview: Overview.md
+    - Product Definition: Overview.md#product-definition
+    - Problem Statement: Overview.md#problem-statement
+    - Target Users: Overview.md#target-users
+    - Key Features: Overview.md#key-features
+    - Workflow Overview: Overview.md#workflow-overview
+  - Architecture:
+    - Architecture: Architecture.md
+    - Core Principles: Architecture.md#core-principles
+    - System Diagram: Architecture.md#system-diagram
+    - Component Breakdown: Architecture.md#component-breakdown
+    - Data Flow: Architecture.md#data-flow
+    - Design Guidelines: Architecture.md#design-guidelines
+    - Scalability Strategy: Architecture.md#scalability-strategy
+  - Backend API:
+    - Backend API: Backend_API.md
+    - API Overview: Backend_API.md#api-overview
+    - Hosted API: Backend_API.md#hosted-api
+    - Prerequisites: Backend_API.md#prerequisites
+    - Setup and Installation: Backend_API.md#setup-and-installation
+    - Architecture Layers: Backend_API.md#architecture-layers
+    - API Conventions: Backend_API.md#api-conventions
+    - Endpoint Categories: Backend_API.md#endpoint-categories
+    - Data Models: Backend_API.md#data-models
+    - Testing and QA: Backend_API.md#testing-and-qa
+    - Code Standards: Backend_API.md#code-standards
+    - Deployment: Backend_API.md#deployment
+  - Frontend Web:
+    - Frontend Web: Frontend_Web.md
+    - Overview: Frontend_Web.md#overview
+    - Technology Stack: Frontend_Web.md#technology-stack
+    - Prerequisites: Frontend_Web.md#prerequisites
+    - Setup and Installation: Frontend_Web.md#setup-and-installation
+    - Project Structure: Frontend_Web.md#project-structure
+    - Coding Standards: Frontend_Web.md#coding-standards
+    - Authentication Flow: Frontend_Web.md#authentication-flow
+    - API Integration: Frontend_Web.md#api-integration
+    - Pages and Features: Frontend_Web.md#pages-and-features
+    - Styling: Frontend_Web.md#styling
+    - Error Handling: Frontend_Web.md#error-handling
+    - QA Documentation: Frontend_Web.md#qa-documentation
+    - Deployment: Frontend_Web.md#deployment
+  - Frontend Mobile:
+    - Frontend Mobile: Frontend_Mobile.md
+    - Overview: Frontend_Mobile.md#overview
+    - Tech Stack: Frontend_Mobile.md#tech-stack
+    - Project Structure: Frontend_Mobile.md#project-structure
+    - Architecture Layers: Frontend_Mobile.md#architecture-layers
+    - Core Components: Frontend_Mobile.md#core-components
+    - Security Measures: Frontend_Mobile.md#security-measures
+    - Installation: Frontend_Mobile.md#installation
+    - Troubleshooting: Frontend_Mobile.md#troubleshooting
+  - Security:
+    - Security: Security.md
+    - Security Posture: Security.md#security-posture
+    - Data Classification: Security.md#data-classification
+    - Network Security: Security.md#network-security
+    - Application Security: Security.md#application-security
+    - Data Security: Security.md#data-security
+    - Webhook Security: Security.md#webhook-security
+    - Physical Security: Security.md#physical-security
+    - Incident Response: Security.md#incident-response
+    - Risk Management: Security.md#risk-management
+    - Conclusion: Security.md#conclusion
+  - Deployment:
+    - Deployment: Deployment.md
+    - Deployment Architecture: Deployment.md#deployment-architecture
+    - Backend Deployment: Deployment.md#backend-deployment
+    - Frontend Deployment: Deployment.md#frontend-deployment
+    - Mobile Deployment: Deployment.md#mobile-deployment
+    - External Services: Deployment.md#external-services
+    - System Integration: Deployment.md#system-integration
+    - Environment Variables: Deployment.md#environment-variables
+    - CI/CD Pipeline: Deployment.md#cicd-pipeline
+  - Developer Guide:
+    - Developer Guide: Developer_Guide.md
+    - Global Code Standards: Developer_Guide.md#global-code-standards
+    - Testing Conventions: Developer_Guide.md#testing-conventions
+    - Git Workflow: Developer_Guide.md#git-workflow
+    - Glossary: Developer_Guide.md#glossary

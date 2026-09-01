@@ -129,3 +129,13 @@ watchdog==6.0.0
 wcwidth==0.8.2
 xdg==5
 xkit==0.0.0
+# MkDocs and Material Theme
+mkdocs>=1.5.0
+mkdocs-material>=9.4.0
+
+# Plugins
+mkdocs-minify-plugin>=0.7.0
+mkdocs-git-revision-date-localized-plugin>=1.2.0
+
+# Extensions
+pymdown-extensions>=10.0
