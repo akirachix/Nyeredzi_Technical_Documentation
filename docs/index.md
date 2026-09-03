@@ -1,4 +1,8 @@
-# IvhuRedu Technical Documentation
+<div class="hero-logo" markdown>
+![logo](assets/images/logo.png)
+</div>
+
+# Technical Documentation
 
 Welcome to the IvhuRedu Technical Documentation. This site contains everything developers need to understand, build, test, and deploy the IvhuRedu agricultural platform.
 
@@ -13,6 +17,7 @@ The platform provides three ways to access its services:
 - **Supervisors and Administrators** use a Next.js web dashboard on computers
 
 All three channels connect through a single backend API and a centralized PostgreSQL database.
+[Explore more](https://nyeredzi-informational-website.vercel.app/#home)
 
 ## Documentation Structure
 
@@ -31,12 +36,12 @@ This documentation is organized into eight main sections:
 
 ## Quick Links
 
-- [Backend API Setup](Backend_API.md#setup-and-installation)
-- [Frontend Web Setup](Frontend_Web.md#setup-and-installation)
-- [Mobile App Setup](Frontend_Mobile.md#installation)
-- [Environment Variables](Deployment.md#environment-variables)
-- [Git Workflow](Developer_Guide.md#git-workflow)
-- [Glossary](Developer_Guide.md#glossary)
+- [Backend API Setup](Backend_API.md)
+- [Frontend Web Setup](Frontend_Web.md)
+- [Mobile App Setup](Frontend_Mobile.md)
+- [Environment Variables](Deployment.md)
+- [Git Workflow](Developer_Guide.md)
+- [Glossary](Developer_Guide.md)
 
 ## Getting Started
 

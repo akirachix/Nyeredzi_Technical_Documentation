@@ -1,0 +1,1999 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../Architecture/">
+      
+      
+        <link rel="next" href="../Frontend_Web/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Backend API - IvhuRedu Technical Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#3-backend-api" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="IvhuRedu Technical Documentation" class="md-header__button md-logo" aria-label="IvhuRedu Technical Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IvhuRedu Technical Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Backend API
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="IvhuRedu Technical Documentation" class="md-nav__button md-logo" aria-label="IvhuRedu Technical Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    IvhuRedu Technical Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Overview/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend API
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hosted-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hosted API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-and-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup and Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture Layers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture Layers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#routers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Routers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Models
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Conventions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Conventions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        URL Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-and-response-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request and Response Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status Codes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naming
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoint-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoint Categories
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoint Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Users
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#farmers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Farmers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extension-workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extension Workers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Locations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#farmer-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Farmer Requests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field Images
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SMS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ussd-and-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USSD and System
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Models
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pydantic-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pydantic Schemas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Models
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-and-qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing and QA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing and QA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unit Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Runner
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coverage-requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coverage Requirement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Standards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naming Conventions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Organization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Platform
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Branch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procfile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scaling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rollback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Frontend_Web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend Web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Frontend_Mobile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend Mobile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#api-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hosted-api" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Hosted API
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prerequisites" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Prerequisites
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-and-installation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Setup and Installation
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#architecture-layers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Architecture Layers
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture Layers">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#routers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Routers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#services" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Services
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Models
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#dependencies" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Dependencies
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#api-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        API Conventions
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="API Conventions">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#http-methods" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        HTTP Methods
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#url-structure" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        URL Structure
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#request-and-response-format" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Request and Response Format
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#status-codes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Status Codes
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#naming" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naming
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#endpoint-categories" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Endpoint Categories
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Endpoint Categories">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#authentication" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Authentication
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Users
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#farmers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Farmers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#extension-workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Extension Workers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#locations" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Locations
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#farmer-requests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Farmer Requests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-images" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field Images
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#field-reports" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Field Reports
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sms" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SMS
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#ussd-and-system" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        USSD and System
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#data-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Data Models
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pydantic-schemas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Pydantic Schemas
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#database-models" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Database Models
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#testing-and-qa" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Testing and QA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Testing and QA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#unit-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Unit Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#integration-tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Integration Tests
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#test-runner" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Test Runner
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#coverage-requirement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Coverage Requirement
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#code-standards" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Code Standards
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Code Standards">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#naming-conventions" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Naming Conventions
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#file-organization" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        File Organization
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#linting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Linting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#documentation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Documentation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployment" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Deployment
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Deployment">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#platform" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Platform
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#branch" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Branch
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#procfile" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Procfile
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#environment-variables" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Environment Variables
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#scaling" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Scaling
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#rollback" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rollback
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="3-backend-api">3. Backend / API<a class="headerlink" href="#3-backend-api" title="Permanent link">&para;</a></h1>
+<p>This page describes the IvhuRedu backend and REST API. It covers what the API does, where it is hosted, what you need to start developing, how to set it up, how it is organized, the rules it follows, the available endpoints, the data structures it uses, how to test it, the code standards it follows, and how to deploy it.</p>
+<hr />
+<h2 id="api-overview">API Overview<a class="headerlink" href="#api-overview" title="Permanent link">&para;</a></h2>
+<p>The IvhuRedu backend is a REST API built with FastAPI. It serves as the central communication layer between all parts of the platform. The USSD service, the mobile application, and the web dashboard all send requests to this API. The API processes those requests, interacts with the PostgreSQL database, calls external services when needed, and returns responses.</p>
+<p>The API handles authentication, user management, farmer registration, extension worker management, location services, farmer requests, field reports, image uploads, SMS messaging, and USSD session processing. It enforces role-based access control so that each user can only access the data and functions allowed by their role.</p>
+<hr />
+<h2 id="hosted-api">Hosted API<a class="headerlink" href="#hosted-api" title="Permanent link">&para;</a></h2>
+<p>The live API is hosted on Heroku. The base URL for the production API is provided in the project configuration. The API documentation is generated automatically by FastAPI and is available at the <code>/docs</code> endpoint. This interactive documentation, powered by Swagger UI, allows developers to explore every endpoint, see the expected request and response formats, and send test requests directly from the browser.</p>
+<p>The API also exposes a <code>/health</code> endpoint that returns the current status of the server. Monitoring tools can call this endpoint to check whether the API is running and healthy.</p>
+<hr />
+<h2 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h2>
+<p>Before you can set up the backend for development, you need the following tools and accounts installed on your computer.</p>
+<table>
+<thead>
+<tr>
+<th>Requirement</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Python 3.9 or higher</td>
+<td>The programming language for the backend</td>
+</tr>
+<tr>
+<td>pip</td>
+<td>For installing Python packages</td>
+</tr>
+<tr>
+<td>Git</td>
+<td>For version control</td>
+</tr>
+<tr>
+<td>PostgreSQL</td>
+<td>Local or remote database for storing data</td>
+</tr>
+<tr>
+<td>Africa's Talking account</td>
+<td>For testing USSD and SMS features</td>
+</tr>
+<tr>
+<td>LocationIQ API key</td>
+<td>For testing geocoding and address lookup</td>
+</tr>
+</tbody>
+</table>
+<p>For local development, you can use a PostgreSQL instance running in Docker or installed directly on your machine. You will also need a tool like ngrok if you want to test USSD webhooks locally, because Africa's Talking requires a publicly reachable HTTPS endpoint.</p>
+<hr />
+<h2 id="setup-and-installation">Setup and Installation<a class="headerlink" href="#setup-and-installation" title="Permanent link">&para;</a></h2>
+<p>Follow these steps to set up the backend on your local machine.</p>
+<ol>
+<li>
+<p>Clone the repository from GitHub and navigate to the backend directory.</p>
+</li>
+<li>
+<p>Create a Python virtual environment to isolate the project dependencies.</p>
+</li>
+<li>
+<p>Activate the virtual environment.</p>
+</li>
+<li>
+<p>Install the required Python packages using the requirements file.</p>
+</li>
+<li>
+<p>Create a <code>.env</code> file in the backend directory. Copy the <code>.env.example</code> file and fill in the actual values for your database URL, Africa's Talking credentials, LocationIQ API key, and other secrets.</p>
+</li>
+<li>
+<p>Run the database migrations to create the required tables.</p>
+</li>
+<li>
+<p>Start the development server using Uvicorn.</p>
+</li>
+</ol>
+<p>The server will start on your local machine and you can access the API at <code>http://localhost:8000</code>. The interactive documentation will be available at <code>http://localhost:8000/docs</code>.</p>
+<hr />
+<h2 id="architecture-layers">Architecture Layers<a class="headerlink" href="#architecture-layers" title="Permanent link">&para;</a></h2>
+<p>The backend code is organized into layers that separate different responsibilities.</p>
+<h3 id="routers">Routers<a class="headerlink" href="#routers" title="Permanent link">&para;</a></h3>
+<p>Routers define the API endpoints. Each router handles a group of related endpoints. For example, the auth router handles login and password management. The farmers router handles farmer registration and updates. Routers receive HTTP requests, validate input using Pydantic models, call the appropriate service functions, and return HTTP responses.</p>
+<h3 id="services">Services<a class="headerlink" href="#services" title="Permanent link">&para;</a></h3>
+<p>Services contain the business logic. A service function performs a specific task such as creating a farmer, assigning a request, or sending an SMS. Services interact with the database through the models layer. They also call external APIs such as Africa's Talking or LocationIQ when needed.</p>
+<h3 id="models">Models<a class="headerlink" href="#models" title="Permanent link">&para;</a></h3>
+<p>Models define the database tables and the data structures used by the API. Database models use SQLAlchemy or SQLModel to map Python classes to PostgreSQL tables. Pydantic schemas define the shape of request and response data. They validate incoming JSON and serialize outgoing data.</p>
+<h3 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h3>
+<p>Dependencies are reusable pieces of logic that routers and services can depend on. The most common dependency is authentication. When a protected endpoint is called, the authentication dependency extracts the token from the request header, validates it, and returns the current user. If the token is invalid or missing, the dependency raises an error.</p>
+<hr />
+<h2 id="api-conventions">API Conventions<a class="headerlink" href="#api-conventions" title="Permanent link">&para;</a></h2>
+<p>The API follows standard REST conventions and project-specific rules.</p>
+<h3 id="http-methods">HTTP Methods<a class="headerlink" href="#http-methods" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Method</th>
+<th>Purpose</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>POST</td>
+<td>Create a new resource</td>
+</tr>
+<tr>
+<td>GET</td>
+<td>Read or retrieve a resource</td>
+</tr>
+<tr>
+<td>PUT</td>
+<td>Replace a resource completely</td>
+</tr>
+<tr>
+<td>PATCH</td>
+<td>Update a resource partially</td>
+</tr>
+<tr>
+<td>DELETE</td>
+<td>Remove a resource</td>
+</tr>
+</tbody>
+</table>
+<h3 id="url-structure">URL Structure<a class="headerlink" href="#url-structure" title="Permanent link">&para;</a></h3>
+<p>Endpoint paths use lowercase letters and hyphens. They are organized by resource. For example, all farmer-related endpoints start with <code>/farmers/</code>. All location-related endpoints start with <code>/locations/</code>.</p>
+<h3 id="request-and-response-format">Request and Response Format<a class="headerlink" href="#request-and-response-format" title="Permanent link">&para;</a></h3>
+<p>All requests and responses use JSON. Dates are formatted as ISO strings. UUIDs are used as identifiers instead of sequential numbers for security.</p>
+<h3 id="status-codes">Status Codes<a class="headerlink" href="#status-codes" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th>Code</th>
+<th>Meaning</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>200</td>
+<td>Success</td>
+</tr>
+<tr>
+<td>201</td>
+<td>Resource was created</td>
+</tr>
+<tr>
+<td>400</td>
+<td>Request input was invalid</td>
+</tr>
+<tr>
+<td>401</td>
+<td>Authentication token is missing or invalid</td>
+</tr>
+<tr>
+<td>403</td>
+<td>User does not have permission</td>
+</tr>
+<tr>
+<td>404</td>
+<td>Requested resource does not exist</td>
+</tr>
+<tr>
+<td>409</td>
+<td>Conflict, such as a duplicate username or email</td>
+</tr>
+<tr>
+<td>500</td>
+<td>Unexpected server error</td>
+</tr>
+</tbody>
+</table>
+<h3 id="naming">Naming<a class="headerlink" href="#naming" title="Permanent link">&para;</a></h3>
+<p>Variables, functions, and file names use <code>snake_case</code>. Class names, Pydantic models, and database models use <code>PascalCase</code>.</p>
+<hr />
+<h2 id="endpoint-categories">Endpoint Categories<a class="headerlink" href="#endpoint-categories" title="Permanent link">&para;</a></h2>
+<p>The API provides endpoints organized into the following categories.</p>
+<h3 id="authentication">Authentication<a class="headerlink" href="#authentication" title="Permanent link">&para;</a></h3>
+<p>These endpoints handle user login, password changes, password recovery, and token refresh. The login endpoint returns an access token, a refresh token, and the user's role.</p>
+<h3 id="users">Users<a class="headerlink" href="#users" title="Permanent link">&para;</a></h3>
+<p>These endpoints manage system users such as administrators and supervisors. They support creating, reading, updating, and deleting user accounts.</p>
+<h3 id="farmers">Farmers<a class="headerlink" href="#farmers" title="Permanent link">&para;</a></h3>
+<p>These endpoints manage farmer records. They support registering new farmers, retrieving farmer details, updating farmer information, and deleting farmer records.</p>
+<h3 id="extension-workers">Extension Workers<a class="headerlink" href="#extension-workers" title="Permanent link">&para;</a></h3>
+<p>These endpoints manage Extension Worker accounts. They support creating workers, updating their status, retrieving worker information, and deleting workers.</p>
+<h3 id="locations">Locations<a class="headerlink" href="#locations" title="Permanent link">&para;</a></h3>
+<p>These endpoints manage geographic data. They support saving locations, searching by text or ward, geocoding addresses, reverse geocoding coordinates, finding nearby workers or farmers, and managing location records.</p>
+<h3 id="farmer-requests">Farmer Requests<a class="headerlink" href="#farmer-requests" title="Permanent link">&para;</a></h3>
+<p>These endpoints manage assistance requests from farmers. They support creating requests, batch creation, duplicate cleanup, searching by USSD keyword, assigning to workers, and managing request status.</p>
+<h3 id="field-images">Field Images<a class="headerlink" href="#field-images" title="Permanent link">&para;</a></h3>
+<p>These endpoints manage images attached to field reports. They support uploading images, downloading decrypted images, retrieving images by report, and managing image records.</p>
+<h3 id="field-reports">Field Reports<a class="headerlink" href="#field-reports" title="Permanent link">&para;</a></h3>
+<p>These endpoints manage field reports submitted by Extension Workers. They support creating reports, retrieving reports by worker, updating reports, and deleting reports.</p>
+<h3 id="sms">SMS<a class="headerlink" href="#sms" title="Permanent link">&para;</a></h3>
+<p>These endpoints manage SMS communication. They support sending individual messages, sending alerts, sending OTPs, verifying OTPs, retrieving logs and history, and receiving delivery callbacks.</p>
+<h3 id="ussd-and-system">USSD and System<a class="headerlink" href="#ussd-and-system" title="Permanent link">&para;</a></h3>
+<p>These endpoints handle USSD callbacks from Africa's Talking and provide system health checks.</p>
+<hr />
+<h2 id="data-models">Data Models<a class="headerlink" href="#data-models" title="Permanent link">&para;</a></h2>
+<p>The API uses two types of data models. Pydantic models define the structure of data sent to and received from the API. SQLAlchemy or SQLModel database models define the structure of tables in the PostgreSQL database.</p>
+<h3 id="pydantic-schemas">Pydantic Schemas<a class="headerlink" href="#pydantic-schemas" title="Permanent link">&para;</a></h3>
+<p>Pydantic schemas are Python classes that define the expected shape of JSON data. They specify which fields are required, which are optional, and what data types are allowed. When a request arrives, FastAPI uses the Pydantic schema to validate the JSON body. If the data does not match the schema, the API returns a 400 error with details about what was wrong.</p>
+<h3 id="database-models">Database Models<a class="headerlink" href="#database-models" title="Permanent link">&para;</a></h3>
+<p>Database models are Python classes that map to PostgreSQL tables. Each class represents one table. Each attribute represents one column. Relationships between tables are defined using foreign keys and relationship attributes. The models use UUIDs as primary keys. Spatial data uses PostGIS geometry types.</p>
+<hr />
+<h2 id="testing-and-qa">Testing and QA<a class="headerlink" href="#testing-and-qa" title="Permanent link">&para;</a></h2>
+<p>The backend has a comprehensive testing strategy to ensure reliability.</p>
+<h3 id="unit-tests">Unit Tests<a class="headerlink" href="#unit-tests" title="Permanent link">&para;</a></h3>
+<p>Unit tests check individual functions and methods in isolation. They verify that a single piece of logic produces the correct output for a given input. Unit tests do not depend on the database or external services.</p>
+<h3 id="integration-tests">Integration Tests<a class="headerlink" href="#integration-tests" title="Permanent link">&para;</a></h3>
+<p>Integration tests check that different parts of the backend work together correctly. They test API endpoints using an HTTP client. They verify that requests flow through the router, service, and model layers correctly. They test database operations and external service interactions.</p>
+<h3 id="test-runner">Test Runner<a class="headerlink" href="#test-runner" title="Permanent link">&para;</a></h3>
+<p>Tests are run using <code>pytest</code>. The HTTP client used for integration tests is <code>httpx.AsyncClient</code>. Test coverage is measured using <code>pytest-cov</code>.</p>
+<h3 id="coverage-requirement">Coverage Requirement<a class="headerlink" href="#coverage-requirement" title="Permanent link">&para;</a></h3>
+<p>Backend test coverage must remain above 90 percent. This means at least 90 percent of the backend code must be executed during tests. If a pull request reduces coverage below this threshold, the developer must add more tests before merging.</p>
+<hr />
+<h2 id="code-standards">Code Standards<a class="headerlink" href="#code-standards" title="Permanent link">&para;</a></h2>
+<p>The backend follows strict code standards to maintain quality and consistency.</p>
+<h3 id="naming-conventions">Naming Conventions<a class="headerlink" href="#naming-conventions" title="Permanent link">&para;</a></h3>
+<p>Use <code>snake_case</code> for variables, functions, and file names. Use <code>PascalCase</code> for classes, Pydantic models, and SQLAlchemy or SQLModel database models.</p>
+<h3 id="file-organization">File Organization<a class="headerlink" href="#file-organization" title="Permanent link">&para;</a></h3>
+<p>Keep Pydantic schemas, database models, routers, and dependencies in separate files unless they are tightly coupled and splitting them would reduce clarity.</p>
+<h3 id="linting">Linting<a class="headerlink" href="#linting" title="Permanent link">&para;</a></h3>
+<p>Use standard Python syntax and style checkers to ensure the code follows Python conventions.</p>
+<h3 id="documentation">Documentation<a class="headerlink" href="#documentation" title="Permanent link">&para;</a></h3>
+<p>Use Python docstrings for all functions, classes, and modules. Update the README and feature documentation whenever you make a change that affects them.</p>
+<h3 id="security">Security<a class="headerlink" href="#security" title="Permanent link">&para;</a></h3>
+<p>Validate all inputs using Pydantic. Handle authentication using FastAPI security dependencies with JWT tokens. Use CORSMiddleware and TrustedHostMiddleware to restrict which origins can access the API.</p>
+<hr />
+<h2 id="deployment">Deployment<a class="headerlink" href="#deployment" title="Permanent link">&para;</a></h2>
+<p>The backend is deployed to Heroku.</p>
+<h3 id="platform">Platform<a class="headerlink" href="#platform" title="Permanent link">&para;</a></h3>
+<p>Heroku provides both staging and production environments. The server runs as an ASGI application using Uvicorn or Gunicorn with Uvicorn workers.</p>
+<h3 id="branch">Branch<a class="headerlink" href="#branch" title="Permanent link">&para;</a></h3>
+<p>Deployments are triggered from the <code>main</code> branch. When code is merged into <code>main</code>, Heroku automatically pulls the latest code and deploys it.</p>
+<h3 id="procfile">Procfile<a class="headerlink" href="#procfile" title="Permanent link">&para;</a></h3>
+<p>The Procfile tells Heroku how to start the application. It contains the command to run the ASGI server. The command specifies the host as <code>0.0.0.0</code> to accept connections from any network interface and uses the <code>PORT</code> environment variable provided by Heroku.</p>
+<h3 id="environment-variables">Environment Variables<a class="headerlink" href="#environment-variables" title="Permanent link">&para;</a></h3>
+<p>Sensitive values such as database URLs and API keys are managed securely in the Heroku dashboard. They are injected at runtime and never committed to the code repository. Locally, environment variables are parsed and validated using Pydantic-Settings.</p>
+<h3 id="scaling">Scaling<a class="headerlink" href="#scaling" title="Permanent link">&para;</a></h3>
+<p>Heroku dynos scale automatically based on traffic. If the number of requests increases, Heroku can spin up additional server instances to handle the load.</p>
+<h3 id="rollback">Rollback<a class="headerlink" href="#rollback" title="Permanent link">&para;</a></h3>
+<p>If a deployment causes problems, you can roll back to a previous stable release directly from the Heroku dashboard. This allows quick recovery from bad deployments.</p>
+<h3 id="steps">Steps<a class="headerlink" href="#steps" title="Permanent link">&para;</a></h3>
+<p>Development happens on feature branches. Code is reviewed through pull requests. When approved, it is merged into <code>main</code>. Heroku detects the merge, pulls the code, and starts the server using the Procfile. Environment variables are injected at runtime. Dynos scale based on demand. Rollback is available if needed.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

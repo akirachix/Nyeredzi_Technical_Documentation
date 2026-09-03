@@ -1,0 +1,1109 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../Architecture/">
+      
+      
+        
+      
+      
+      <link rel="icon" href="../assets/images/logo.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+    
+    
+      
+        <title>Overview - IvhuRedu Technical Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="green">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#1-overview" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="IvhuRedu Technical Documentation" class="md-header__button md-logo" aria-label="IvhuRedu Technical Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            IvhuRedu Technical Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Overview
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="custom" data-md-color-accent="green"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="custom" data-md-color-accent="green"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="IvhuRedu Technical Documentation" class="md-nav__button md-logo" aria-label="IvhuRedu Technical Documentation" data-md-component="logo">
+      
+  <img src="../assets/images/logo.png" alt="logo">
+
+    </a>
+    IvhuRedu Technical Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Overview
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#product-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Definition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#target-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Users
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Target Users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#farmers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Farmers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agritex-extension-workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agritex Extension Workers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agritex-extension-officers-and-supervisors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agritex Extension Officers and Supervisors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administrators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Administrators
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#farmer-ussd-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Farmer USSD Access
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agritex-extension-worker-mobile-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agritex Extension Worker Mobile App
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assistance-and-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assistance and Reporting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agritex-web-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agritex Web Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#location-and-assignment-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Location and Assignment Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sms-alerts-and-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SMS Alerts and Notifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secure-authentication-and-data-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secure Authentication and Data Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Architecture/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Architecture
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Backend_API/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Backend API
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Frontend_Web/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend Web
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Frontend_Mobile/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Frontend Mobile
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Security/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Security
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Deployment/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Deployment
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Developer_Guide/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Developer Guide
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#product-definition" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Product Definition
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Problem Statement
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#target-users" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Target Users
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Target Users">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#farmers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Farmers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agritex-extension-workers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agritex Extension Workers
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agritex-extension-officers-and-supervisors" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agritex Extension Officers and Supervisors
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#administrators" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Administrators
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#key-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Key Features
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Key Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#farmer-ussd-access" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Farmer USSD Access
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agritex-extension-worker-mobile-app" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agritex Extension Worker Mobile App
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#assistance-and-reporting" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Assistance and Reporting
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#agritex-web-dashboard" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Agritex Web Dashboard
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#location-and-assignment-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Location and Assignment Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#sms-alerts-and-notifications" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        SMS Alerts and Notifications
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#secure-authentication-and-data-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Secure Authentication and Data Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#workflow-overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Workflow Overview
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="1-overview">1. Overview<a class="headerlink" href="#1-overview" title="Permanent link">&para;</a></h1>
+<p>This page introduces the IvhuRedu platform. It explains what the product is, the problem it solves, who uses it, what it can do, and how the main workflow operates from start to finish.</p>
+<hr />
+<h2 id="product-definition">Product Definition<a class="headerlink" href="#product-definition" title="Permanent link">&para;</a></h2>
+<p>IvhuRedu is a digital agricultural platform that connects farmers and Agritex officers. The name IvhuRedu translates to "Our Soil." The platform improves how agricultural information is collected, shared, managed, and monitored in the field.</p>
+<p>The system provides three main ways to access its services:</p>
+<table>
+<thead>
+<tr>
+<th>User Type</th>
+<th>Access Method</th>
+<th>Device</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Farmers</td>
+<td>USSD</td>
+<td>Basic mobile phone</td>
+</tr>
+<tr>
+<td>Extension Workers</td>
+<td>Flutter mobile app</td>
+<td>Android smartphone</td>
+</tr>
+<tr>
+<td>Supervisors and Administrators</td>
+<td>Next.js web dashboard</td>
+<td>Computer</td>
+</tr>
+</tbody>
+</table>
+<p>All three access channels connect through a single backend API and a centralized PostgreSQL database. This design ensures that data remains consistent no matter which channel a user chooses.</p>
+<hr />
+<h2 id="problem-statement">Problem Statement<a class="headerlink" href="#problem-statement" title="Permanent link">&para;</a></h2>
+<p>Before IvhuRedu, agricultural extension services faced several challenges that reduced their effectiveness.</p>
+<p><strong>Farmers in rural areas often lack smartphones and reliable internet access.</strong> This made it difficult for them to report problems, request assistance, or share information about their land using digital tools. Many farmers could not participate in digital agricultural programs at all.</p>
+<p><strong>Agritex Extension Workers spent much of their time managing paper records.</strong> Field reports were handwritten, photographs were stored separately, and location data was often inaccurate or missing. This made it hard to organize information and track progress over time.</p>
+<p><strong>Supervisors and Extension Officers lacked a centralized view of field activities.</strong> They could not easily see which workers were available, which farmers needed help, or what issues were being reported across different wards. Decision-making was slowed by the lack of timely, accurate data.</p>
+<p><strong>Communication between farmers and officers relied on phone calls and physical visits.</strong> There was no reliable way to send alerts, confirm assignments, or notify farmers when help was on the way.</p>
+<p>IvhuRedu was built to solve these problems by providing accessible digital tools for every participant in the agricultural extension process.</p>
+<hr />
+<h2 id="target-users">Target Users<a class="headerlink" href="#target-users" title="Permanent link">&para;</a></h2>
+<p>The platform serves four distinct groups of users. Each group has different needs, devices, and permissions.</p>
+<h3 id="farmers">Farmers<a class="headerlink" href="#farmers" title="Permanent link">&para;</a></h3>
+<p>Farmers are the primary beneficiaries of the platform. They interact with IvhuRedu through USSD using any basic mobile phone. They do not need a smartphone or internet connection. Farmers can request assistance, report land degradation, ask for advice, and receive SMS alerts about their requests.</p>
+<h3 id="agritex-extension-workers">Agritex Extension Workers<a class="headerlink" href="#agritex-extension-workers" title="Permanent link">&para;</a></h3>
+<p>Extension Workers are field officers who visit farms and provide direct support to farmers. They use the Flutter mobile application on Android smartphones. Through the app, they view their assignments, access farmer information, submit field reports, collect images, and record GPS coordinates. They work offline when network coverage is poor and sync data when connectivity returns.</p>
+<h3 id="agritex-extension-officers-and-supervisors">Agritex Extension Officers and Supervisors<a class="headerlink" href="#agritex-extension-officers-and-supervisors" title="Permanent link">&para;</a></h3>
+<p>Supervisors manage Extension Workers and oversee field operations. They use the Next.js web dashboard on desktop or laptop computers. Supervisors can register workers, assign tasks, monitor reports, view analytics, send SMS alerts, and manage farmer requests. They have a comprehensive view of all platform activities.</p>
+<h3 id="administrators">Administrators<a class="headerlink" href="#administrators" title="Permanent link">&para;</a></h3>
+<p>Administrators are the top-level system managers. They also use the web dashboard. Administrators can register and manage supervisors, view all users, monitor system activity, and configure platform settings. They have the highest level of access to the system.</p>
+<hr />
+<h2 id="key-features">Key Features<a class="headerlink" href="#key-features" title="Permanent link">&para;</a></h2>
+<p>IvhuRedu provides a comprehensive set of features designed to support every stage of agricultural extension work.</p>
+<h3 id="farmer-ussd-access">Farmer USSD Access<a class="headerlink" href="#farmer-ussd-access" title="Permanent link">&para;</a></h3>
+<p>Farmers access the platform through USSD sessions powered by Africa's Talking. The interface presents simple text menus that work on any mobile phone. Farmers can navigate using number inputs to request help, report problems, or check status. The system sends SMS confirmations and updates to keep farmers informed.</p>
+<h3 id="agritex-extension-worker-mobile-app">Agritex Extension Worker Mobile App<a class="headerlink" href="#agritex-extension-worker-mobile-app" title="Permanent link">&para;</a></h3>
+<p>The mobile application provides tools for field work. Workers can view lists of registered farmers and add new farmer records. They see their assignments with details about what task to perform and where. They create field reports that include text descriptions, photographs, and location data. The app works offline and synchronizes with the backend when a network connection is available.</p>
+<h3 id="assistance-and-reporting">Assistance and Reporting<a class="headerlink" href="#assistance-and-reporting" title="Permanent link">&para;</a></h3>
+<p>Farmers request assistance through USSD. Extension Workers submit field reports through the mobile app. Supervisors monitor all requests and reports through the web dashboard. Reports include evidence such as field images and GPS coordinates. Request statuses track progress from pending through in progress to resolved.</p>
+<h3 id="agritex-web-dashboard">Agritex Web Dashboard<a class="headerlink" href="#agritex-web-dashboard" title="Permanent link">&para;</a></h3>
+<p>The dashboard provides centralized monitoring and management. Supervisors can manage Extension Workers, view analytics about registered farmers and field visits, handle incoming farmer requests, send individual or broadcast SMS messages, and configure their account settings. The dashboard presents data through tables, charts, and maps.</p>
+<h3 id="location-and-assignment-management">Location and Assignment Management<a class="headerlink" href="#location-and-assignment-management" title="Permanent link">&para;</a></h3>
+<p>The platform collects and manages location information for farmers, field activities, and Extension Workers. The Location Module connects to LocationIQ for geocoding and address lookup. Supervisors assign requests to workers based on location, availability, and workload. The system tracks assignment progress and worker status.</p>
+<h3 id="sms-alerts-and-notifications">SMS Alerts and Notifications<a class="headerlink" href="#sms-alerts-and-notifications" title="Permanent link">&para;</a></h3>
+<p>The SMS Alert Module sends text messages to farmers and workers at key stages of the workflow. Messages include request confirmations, assignment notifications, status updates, and broadcast alerts. The platform integrates with Africa's Talking and SMS Leopard for message delivery.</p>
+<h3 id="secure-authentication-and-data-management">Secure Authentication and Data Management<a class="headerlink" href="#secure-authentication-and-data-management" title="Permanent link">&para;</a></h3>
+<p>The platform uses role-based access control. Each user role sees only the features and data appropriate to their responsibilities. Authentication uses secure tokens. Passwords and PINs are encrypted. Sensitive configuration values are stored in environment variables and never committed to source control.</p>
+<hr />
+<h2 id="workflow-overview">Workflow Overview<a class="headerlink" href="#workflow-overview" title="Permanent link">&para;</a></h2>
+<p>The following steps describe how information flows through the platform from a farmer's initial request to the final resolution and reporting.</p>
+<ol>
+<li>
+<p>A farmer dials the USSD code on their basic mobile phone and navigates the menu to request assistance or report a land problem.</p>
+</li>
+<li>
+<p>Africa's Talking receives the USSD input and forwards it to the IvhuRedu backend API as a structured request.</p>
+</li>
+<li>
+<p>The backend stores the farmer request in the PostgreSQL database through the Assistance Module.</p>
+</li>
+<li>
+<p>The request becomes visible on the web dashboard in the Farmer Request section. A supervisor sees the new pending request.</p>
+</li>
+<li>
+<p>The supervisor reviews the farmer details and location information. They select an available Extension Worker and assign the request through the Assignment Module.</p>
+</li>
+<li>
+<p>The assigned worker receives the assignment in their Flutter mobile application. They may also receive an SMS alert about the new task.</p>
+</li>
+<li>
+<p>The Extension Worker travels to the farmer's location. They use the mobile app to access the farmer's information and navigate to the site.</p>
+</li>
+<li>
+<p>During the visit, the worker assesses the situation, takes photographs of the field, and records the GPS coordinates.</p>
+</li>
+<li>
+<p>The worker creates a field report in the mobile app. The report includes observations, images, and location data. They submit the report to the backend.</p>
+</li>
+<li>
+<p>The backend stores the report in the database through the Reporting Module. The images are saved and linked to the report.</p>
+</li>
+<li>
+<p>The completed report appears on the web dashboard. The supervisor can review the evidence and monitor the resolution.</p>
+</li>
+<li>
+<p>The farmer may receive an SMS notification that their request has been addressed and the report has been filed.</p>
+</li>
+<li>
+<p>Throughout this process, analytics data is collected and displayed on the dashboard, showing metrics such as total registered farmers, field visits, disease and pest reports, crop distribution, and worker engagement.</p>
+</li>
+</ol>
+<p>This workflow demonstrates how the USSD service, mobile application, and web dashboard all connect through the backend API to create a seamless experience for every user.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "..", "features": ["navigation.sections", "navigation.expand", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      
+    
+  </body>
+</html>

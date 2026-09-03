@@ -1,7 +1,13 @@
 # 5. Frontend Mobile
 
 This page describes the IvhuRedu mobile application. It covers what the app is, the technologies used, how the project is organized, the architecture layers, the core components, the security measures, how to install it, and how to troubleshoot common problems.
-
+<div class="image-grid" markdown>
+![Mobile App](assets/images/mobile-app.png)
+![Mobile App](assets/images/MOB.png)
+![Mobile App](assets/images/MOBI.png)
+![Mobile App](assets/images/MOBILE3.png)
+![Mobile App](assets/images/MOBILE.png)
+</div>
 ---
 
 ## Overview

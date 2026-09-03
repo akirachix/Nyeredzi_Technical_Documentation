@@ -1,5 +1,6 @@
 # 4. Frontend Web
 
+
 This page describes the IvhuRedu web dashboard. It covers what the dashboard is, the technologies used, what you need to start developing, how to install it, how the project is organized, the coding rules, how users log in, how it connects to the backend, the pages and features it provides, how it is styled, how errors are handled, how it is tested, and how it is deployed.
 
 ---
@@ -11,6 +12,7 @@ The IvhuRedu web dashboard is a Next.js application used by Administrators and S
 Extension Field Workers do not use the web dashboard. They use the Flutter mobile application for all their field work. The dashboard is designed for desktop and laptop computers with larger screens.
 
 The dashboard communicates with the backend API for all data operations. It does not store data locally beyond session tokens and cached page data. All persistent information lives in the PostgreSQL database accessed through the backend.
+![Mobile App](assets/images/DASH.png)
 
 ---
 

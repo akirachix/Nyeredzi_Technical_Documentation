@@ -44,6 +44,10 @@ To the side are two external integrations. Africa's Talking handles USSD session
 
 The arrows in the architecture show that all user channels point to the backend API. The backend API points to the database. The backend also points to Africa's Talking and LocationIQ when it needs their services. No arrow connects the user channels directly to each other or to the external services.
 
+<div class="image-grid" markdown>
+![System Architecture Diagram](assets/images/SAD.png)
+</div>
+
 ---
 
 ## Component Breakdown
@@ -142,6 +146,8 @@ The backend is deployed on Heroku. Heroku dynos can scale automatically based on
 ### Database Scaling
 
 PostgreSQL performance is maintained by using indexes on frequently queried columns. Primary keys use UUIDs. Spatial queries use PostGIS spatial indexes. As the database grows, query performance is preserved. If needed, the database can be upgraded to a larger plan on Heroku or migrated to a dedicated database server.
+![Mobile App](assets/images/ERD.png)
+
 
 ### Caching
 
