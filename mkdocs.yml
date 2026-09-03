@@ -1,0 +1,55 @@
+site_name: IvhuRedu Technical Documentation
+
+theme:
+  name: material
+  language: en 
+  logo: assets/images/logo.png
+  favicon: assets/images/logo.png
+  palette:
+    - scheme: default
+      primary: custom
+      accent: green
+      name: Light Mode
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - scheme: slate
+      primary: custom
+      accent: green
+      name: Dark Mode
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  features:
+    - navigation.sections
+    - navigation.expand
+    - search.suggest
+    - search.highlight
+
+extra_css:
+  - assets/stylesheets/extra.css
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - tables
+  - attr_list
+  - md_in_html
+
+extra:
+  translations:
+    search.result.placeholder: " "
+
+nav:
+  - Home: index.md
+  - Overview: Overview.md
+  - Architecture: Architecture.md
+  - Backend API: Backend_API.md
+  - Frontend Web: Frontend_Web.md
+  - Frontend Mobile: Frontend_Mobile.md
+  - Security: Security.md
+  - Deployment: Deployment.md
+  - Developer Guide: Developer_Guide.md
